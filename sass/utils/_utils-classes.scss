@@ -10,8 +10,15 @@
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include for-desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .section__title {
@@ -20,16 +27,28 @@
 
   text-align: center;
   color: $title-text-cl;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.14;
+
+  @include for-desktop {
+    font-size: 36px;
+  }
 }
 
 .container {
-  max-width: $content-width;
+  max-width: $phone-sz;
+
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+
+  @include for-tablet {
+    max-width: $tablet-sz;
+  }
+  @include for-desktop {
+    max-width: $desktop-sz;
+  }
 }
 
 .btn {
@@ -62,6 +81,15 @@
 .card-set {
   @extend %list-none;
 
+  @include for-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * #{$card-magrin});
+    margin-top: calc(-1 * #{$card-magrin});
+  }
+}
+
+.card-set--phone {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * #{$card-magrin});

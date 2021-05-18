@@ -35,7 +35,9 @@
 }
 
 .footer__socials {
-  justify-content: start;
+  @include for-desktop {
+    justify-content: start;
+  }
 }
 
 .footer-socials__link {

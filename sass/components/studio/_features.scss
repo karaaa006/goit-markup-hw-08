@@ -3,7 +3,20 @@
 }
 
 .features__item {
-  @include card-set(4);
+  width: 100%;
+
+  @include for-phone-to-tablet {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @include for-tablet {
+    @include card-set(2);
+  }
+
+  @include for-desktop {
+    @include card-set(4);
+  }
 }
 
 .features__icon-wrap {
@@ -30,6 +43,11 @@
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.14;
+  text-align: center;
+
+  @include for-tablet {
+    text-align: left;
+  }
 }
 
 .features__info {

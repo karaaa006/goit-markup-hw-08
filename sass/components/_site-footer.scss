@@ -10,23 +10,54 @@
 }
 
 .site-footer__container {
-  display: flex;
+  text-align: center;
+
+  @include for-tablet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @include for-desktop {
+    text-align: left;
+  }
 }
 
 .site-footer__block {
-  padding-top: 12px;
-
-  &--no-padding-top {
-    padding-top: 0;
+  @include for-phone-to-tablet {
+    &:not(:first-child) {
+      padding-top: 60px;
+    }
   }
-  &--large {
-    flex-grow: 1;
-  }
-}
 
-.site-footer__block:not(:last-child) {
-  flex-basis: calc(100% / 4 - #{$card-magrin});
-  margin-right: $card-magrin;
+  @include for-tablet {
+    &:last-child {
+      padding-top: 60px;
+    }
+
+    &:not(:last-child) {
+      flex-basis: 50%;
+    }
+
+    &--large {
+      flex-basis: 450px;
+    }
+  }
+
+  @include for-desktop {
+    &:not(:first-child) {
+      padding-top: 12px;
+    }
+
+    &:not(:last-child) {
+      flex-basis: calc(25% - #{$card-magrin});
+      margin-right: $card-magrin;
+    }
+
+    &--large {
+      flex-grow: 1;
+    }
+  }
 }
 
 .site-footer__address-list {
@@ -36,8 +67,12 @@
   font-size: 14px;
 }
 
-.site-footer__address-item {
-  margin-bottom: 9px;
+.site-footer__address-item:not(:last-child) {
+  margin-bottom: 8px;
+
+  @include for-desktop {
+    margin-bottom: 9px;
+  }
 }
 
 .site-footer__address-link {
@@ -65,15 +100,19 @@
 }
 
 .site-footer__follow-block {
-  flex-grow: 1;
+  @include for-desktop {
+    flex-grow: 1;
+  }
 }
 
 .site-footer__follow-form {
-  display: flex;
+  @include for-desktop {
+    display: flex;
+  }
 }
 
 .site-footer__follow-input {
-  flex-grow: 1;
+  width: 100%;
   margin-right: 12px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -81,6 +120,14 @@
 
   background-color: transparent;
   color: $white-cl;
+
+  @include for-phone-to-desktop {
+    margin-bottom: 20px;
+  }
+
+  @include for-desktop {
+    flex-grow: 1;
+  }
 }
 
 .site-footer__follow-input::placeholder {
@@ -92,6 +139,8 @@
   align-items: center;
   padding-left: 29px;
   padding-right: 29px;
+  margin-left: auto;
+  margin-right: auto;
 
   background-color: $accent-cl;
   color: $white-cl;

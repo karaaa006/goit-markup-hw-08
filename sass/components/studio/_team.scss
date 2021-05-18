@@ -6,12 +6,26 @@
 }
 
 .teammates__item {
-  @include card-set(4);
+  width: 100%;
 
   border-radius: 0px 0px 4px 4px;
   box-shadow: $shadow-teammates-card;
 
   background-color: $white-cl;
+
+  @include for-phone-to-tablet {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include for-tablet {
+    @include card-set(2);
+  }
+
+  @include for-desktop {
+    @include card-set(4);
+  }
 }
 
 .teammates__info {

@@ -1,5 +1,13 @@
 .clients__item {
-  @include card-set(6);
+  @include for-phone-to-tablet {
+    @include card-set(2);
+  }
+  @include for-tablet {
+    @include card-set(3);
+  }
+  @include for-desktop {
+    @include card-set(6);
+  }
 }
 
 .clients__link {

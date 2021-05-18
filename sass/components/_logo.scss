@@ -2,9 +2,13 @@
   color: $title-text-cl;
   font-family: $logo-font;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   text-decoration: none;
   line-height: 1.2;
+
+  @include for-desktop {
+    font-size: 26px;
+  }
 }
 
 .site-header__logo {
