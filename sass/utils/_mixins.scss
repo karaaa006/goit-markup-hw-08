@@ -1,0 +1,5 @@
+@mixin card-set($num) {
+  flex-basis: calc(100% / #{$num} - #{$card-magrin});
+  margin-left: $card-magrin;
+  margin-top: $card-magrin;
+}

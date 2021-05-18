@@ -1,0 +1,28 @@
+.section__hero {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  background-image: linear-gradient($hero-overlay-cl, $hero-overlay-cl),
+    url("../images/bg_hero.jpg");
+  background-position: center;
+  background-size: cover;
+
+  text-align: center;
+}
+
+.hero__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  max-width: 650px;
+
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.36;
+  color: $white-cl;
+
+  text-transform: uppercase;
+}

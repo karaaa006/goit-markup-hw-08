@@ -1,0 +1,44 @@
+.socials {
+  @extend %list-none;
+
+  display: flex;
+  justify-content: center;
+}
+
+.socials__link {
+  @extend %link;
+
+  color: $icon-cl;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-cl;
+    color: $white-cl;
+  }
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.socials__link {
+  display: flex;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.socials__icon {
+  width: 20px;
+  height: 20px;
+
+  fill: currentColor;
+}
+
+.footer__socials {
+  justify-content: start;
+}
+
+.footer-socials__link {
+  color: $white-cl;
+  background-color: $socials-bg-footer-cl;
+}

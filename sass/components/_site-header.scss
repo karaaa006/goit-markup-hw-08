@@ -1,0 +1,94 @@
+.site-header {
+  font-size: 14px;
+  font-weight: 500;
+  border-bottom: $projects-border;
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav__list {
+  @extend %list-none;
+
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
+  @extend %link;
+
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: $title-text-cl;
+  letter-spacing: 0.02em;
+
+  &:hover,
+  &:focus {
+    color: $accent-cl;
+  }
+
+  &--current {
+    color: $accent-cl;
+  }
+
+  &--current::after {
+    content: "";
+
+    position: absolute;
+    bottom: -1px;
+
+    width: 100%;
+    display: block;
+    border: 2px solid $accent-cl;
+    border-radius: 2px;
+  }
+}
+
+.contact-list {
+  @extend %list-none;
+
+  display: flex;
+}
+
+.site-header__contact-list {
+  margin-left: auto;
+}
+
+.contact-list__item {
+  color: var(--primary-text-color);
+}
+
+.contact-list__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-list__icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.contact-list__link {
+  @extend %link;
+
+  display: flex;
+  color: var(--primary-text-color);
+  line-height: 1.14;
+
+  &:hover,
+  &:focus {
+    color: $accent-cl;
+  }
+}

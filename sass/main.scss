@@ -1,0 +1,22 @@
+@import "./utils/vars";
+@import "./utils/placeholders";
+@import "./utils/mixins";
+@import "./utils/utils-classes";
+@import "./base/base";
+
+@import "./components/logo";
+@import "./components/site-header";
+@import "./components/socials";
+@import "./components/site-footer";
+
+// Studio
+@import "./components/studio/hero";
+@import "./components/studio/features";
+@import "./components/studio/about";
+@import "./components/studio/team";
+@import "./components/studio/clients";
+@import "./components/studio/modal";
+
+// Projects
+@import "./components/projects/filter";
+@import "./components/projects/projects";

@@ -1,0 +1,10 @@
+%list-none {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+%link {
+  text-decoration: none;
+  transition: color $transition-style, background-color $transition-style;
+}

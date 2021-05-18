@@ -1,0 +1,26 @@
+.about {
+  padding-top: 0;
+}
+
+.about__item {
+  position: relative;
+
+  @include card-set(3);
+}
+
+.about__item-title {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white-cl;
+  background-color: $about-title-bg-cl;
+}

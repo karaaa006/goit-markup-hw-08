@@ -1,0 +1,27 @@
+.clients__item {
+  @include card-set(6);
+}
+
+.clients__link {
+  display: flex;
+  height: 92px;
+  border: 1px solid $icon-cl;
+  border-radius: 4px;
+
+  justify-content: center;
+  align-items: center;
+
+  color: $icon-cl;
+
+  transition: color $transition-style, border-color $transition-style;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-cl;
+    color: $accent-cl;
+  }
+}
+
+.clients__icon {
+  fill: currentColor;
+}

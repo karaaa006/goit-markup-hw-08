@@ -1,0 +1,18 @@
+.filter {
+  @extend %list-none;
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filter__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.filter__btn {
+  font-weight: 500;
+  line-height: 1.6;
+
+  padding: 6px 22px;
+}

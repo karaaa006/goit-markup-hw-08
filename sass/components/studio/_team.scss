@@ -1,0 +1,35 @@
+.teammates {
+  background-color: $secondary-bg-cl;
+
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.teammates__item {
+  @include card-set(4);
+
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: $shadow-teammates-card;
+
+  background-color: $white-cl;
+}
+
+.teammates__info {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  text-align: center;
+}
+
+.teammates__name {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  color: $title-text-cl;
+}
+
+.teammates__position {
+  margin: 0;
+  margin-bottom: 16px;
+}

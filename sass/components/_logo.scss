@@ -1,0 +1,23 @@
+.logo {
+  color: $title-text-cl;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.site-header__logo {
+  margin-right: 93px;
+}
+
+.site-footer__logo {
+  margin-bottom: 20px;
+  display: block;
+
+  color: var(--white-color);
+}
+
+.logo__accent {
+  color: $accent-cl;
+}

@@ -1,0 +1,107 @@
+.site-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $dark-bg-cl;
+
+  line-height: 1.71;
+
+  color: $white-cl;
+}
+
+.site-footer__container {
+  display: flex;
+}
+
+.site-footer__block {
+  padding-top: 12px;
+
+  &--no-padding-top {
+    padding-top: 0;
+  }
+  &--large {
+    flex-grow: 1;
+  }
+}
+
+.site-footer__block:not(:last-child) {
+  flex-basis: calc(100% / 4 - #{$card-magrin});
+  margin-right: $card-magrin;
+}
+
+.site-footer__address-list {
+  @extend %list-none;
+
+  font-style: normal;
+  font-size: 14px;
+}
+
+.site-footer__address-item {
+  margin-bottom: 9px;
+}
+
+.site-footer__address-link {
+  @extend %link;
+
+  color: $footer-contact-cl;
+  &--white {
+    color: $white-cl;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-cl;
+  }
+}
+
+.site-footer__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: $white-cl;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.site-footer__follow-block {
+  flex-grow: 1;
+}
+
+.site-footer__follow-form {
+  display: flex;
+}
+
+.site-footer__follow-input {
+  flex-grow: 1;
+  margin-right: 12px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+
+  background-color: transparent;
+  color: $white-cl;
+}
+
+.site-footer__follow-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.site-footer__follow-btn {
+  display: flex;
+  align-items: center;
+  padding-left: 29px;
+  padding-right: 29px;
+
+  background-color: $accent-cl;
+  color: $white-cl;
+  box-shadow: $shadow-btn;
+}
+
+.site-footer__follow-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+
+  fill: currentColor;
+}
