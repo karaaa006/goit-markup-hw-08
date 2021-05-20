@@ -6,11 +6,20 @@
   padding-bottom: 118px;
 
   background-image: linear-gradient($hero-overlay-cl, $hero-overlay-cl),
-    url("../images/bg_hero.jpg");
+    url("../images/bg_hero@1x.jpg");
   background-position: center;
   background-size: cover;
 
   text-align: center;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .box {
+      background-image: linear-gradient($hero-overlay-cl, $hero-overlay-cl),
+        url("../images/bg_hero@2x.jpg");
+    }
+  }
 }
 
 .hero__title {

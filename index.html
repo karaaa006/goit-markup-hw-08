@@ -189,15 +189,32 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="card-set">
             <li class="about__item">
-              <img src="./images/img1.jpg" alt="программирование" width="370" />
+              <picture>
+                <source
+                  srcset="./images/img1@1x.jpg 1x, ./images/img1@2x.jpg 2x"
+                />
+
+                <img src="./images/img1.jpg" alt="программирование" />
+              </picture>
               <h3 class="about__item-title">Десктопные приложения</h3>
             </li>
             <li class="about__item">
-              <img src="./images/img2.jpg" alt="тестирование" width="370" />
+              <picture>
+                <source
+                  srcset="./images/img2@1x.jpg 1x, ./images/img2@2x.jpg 2x"
+                />
+
+                <img src="./images/img2.jpg" alt="программирование" />
+              </picture>
               <h3 class="about__item-title">Мобильные приложения</h3>
             </li>
             <li class="about__item">
-              <img src="./images/img3.jpg" alt="дизайн" width="370" />
+              <picture>
+                <source
+                  srcset="./images/img3@1x.jpg 1x, ./images/img3@2x.jpg 2x"
+                />
+                <img src="./images/img3.jpg" alt="программирование" />
+              </picture>
               <h3 class="about__item-title">Дизайнерские решения</h3>
             </li>
           </ul>
@@ -209,7 +226,32 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="card-set">
             <li class="teammates__item">
-              <img src="./images/igor.jpg" alt="Игорь Демьяненко" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/igor-desktop@1x.jpg 1x,
+                    ./images/igor-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/igor-tablet@1x.jpg 1x,
+                    ./images/igor-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/igor-phone@1x.jpg 1x,
+                    ./images/igor-phone@2x.jpg 2x
+                  "
+                />
+
+                <img src="./images/igor.jpg" alt="Игорь Демьяненко" />
+              </picture>
+
               <div class="teammates__info">
                 <h3 class="teammates__name">Игорь Демьяненко</h3>
                 <p class="teammates__position">Product Designer</p>
@@ -246,7 +288,31 @@
               </div>
             </li>
             <li class="teammates__item">
-              <img src="./images/olga.jpg" alt="Ольга Репина" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/olga-desktop@1x.jpg 1x,
+                    ./images/olga-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/olga-tablet@1x.jpg 1x,
+                    ./images/olga-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/olga-phone@1x.jpg 1x,
+                    ./images/olga-phone@2x.jpg 2x
+                  "
+                />
+
+                <img src="./images/olga.jpg" alt="Ольга Репина" />
+              </picture>
               <div class="teammates__info">
                 <h3 class="teammates__name">Ольга Репина</h3>
                 <p class="teammates__position">Frontend Developer</p>
@@ -283,11 +349,31 @@
               </div>
             </li>
             <li class="teammates__item">
-              <img
-                src="./images/nikolay.jpg"
-                alt="Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/nikolay-desktop@1x.jpg 1x,
+                    ./images/nikolay-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/nikolay-tablet@1x.jpg 1x,
+                    ./images/nikolay-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/nikolay-phone@1x.jpg 1x,
+                    ./images/nikolay-phone@2x.jpg 2x
+                  "
+                />
+
+                <img src="./images/nikolay.jpg" alt="Николай Тарасов" />
+              </picture>
               <div class="teammates__info">
                 <h3 class="teammates__name">Николай Тарасов</h3>
                 <p class="teammates__position">Marketing</p>
@@ -324,7 +410,31 @@
               </div>
             </li>
             <li class="teammates__item">
-              <img src="./images/mihail.jpg" alt="Михаил Ермаков" width="270" />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/mihail-desktop@1x.jpg 1x,
+                    ./images/mihail-desktop@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/mihail-tablet@1x.jpg 1x,
+                    ./images/mihail-tablet@2x.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 480px)"
+                  srcset="
+                    ./images/mihail-phone@1x.jpg 1x,
+                    ./images/mihail-phone@2x.jpg 2x
+                  "
+                />
+
+                <img src="./images/mihail.jpg" alt="Михаил Ермаков" />
+              </picture>
               <div class="teammates__info">
                 <h3 class="teammates__name">Михаил Ермаков</h3>
                 <p class="teammates__position">UI Designer</p>
