@@ -12,7 +12,12 @@
 }
 
 .site-header__logo {
-  margin-right: 93px;
+  @include for-tablet {
+    margin-right: 88px;
+  }
+  @include for-desktop {
+    margin-right: 93px;
+  }
 }
 
 .site-footer__logo {

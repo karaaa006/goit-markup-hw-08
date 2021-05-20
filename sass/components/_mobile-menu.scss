@@ -1,0 +1,139 @@
+.mobile-menu__btn {
+  position: relative;
+  z-index: 10;
+
+  border: none;
+  background-color: transparent;
+
+  transition: color $transition-style;
+
+  &:hover,
+  &:focus {
+    color: $accent-cl;
+  }
+
+  &.is-open .mobile-menu__btn-close {
+    display: block;
+  }
+
+  &.is-open .mobile-menu__btn-open {
+    display: none;
+  }
+
+  @include for-tablet {
+    display: none;
+  }
+}
+
+.mobile-menu__btn-icon {
+  fill: currentColor;
+}
+
+.mobile-menu__btn-close {
+  display: none;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 9;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-left: 40px;
+  transform: translateY(100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: scroll;
+
+  background-color: #fff;
+  &.is-open {
+    transform: translateY(0);
+  }
+
+  transition: transform $transition-style;
+
+  @include for-tablet {
+    display: none;
+  }
+}
+
+.mobile-menu__nav-list {
+  @extend %list-none;
+}
+
+.mobile-menu__nav-item {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__nav-link {
+  @extend %link;
+
+  font-size: 40px;
+  color: $title-text-cl;
+
+  &--current {
+    color: $accent-cl;
+  }
+}
+
+.mobile-menu__phone {
+  @extend %link;
+
+  display: block;
+  margin-bottom: 32px;
+
+  color: $accent-cl;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+
+  @media screen and (max-width: 445px) {
+    font-size: 27px;
+  }
+}
+
+.mobile-menu__mail {
+  @extend %link;
+
+  display: block;
+  margin-bottom: 64px;
+
+  color: $primary-text-cl;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu__socials-list {
+  @extend %list-none;
+
+  display: flex;
+
+  @media screen and (max-width: 445px) {
+    flex-direction: column;
+  }
+}
+.mobile-menu__socials-item {
+  &:not(:last-child) {
+    padding-right: 10px;
+    margin-right: 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+
+    @media screen and (max-width: 445px) {
+      border-right: none;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.mobile-menu__socials-link {
+  @extend %link;
+
+  font-size: 18px;
+
+  color: $accent-cl;
+}

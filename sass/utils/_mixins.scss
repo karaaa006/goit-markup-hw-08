@@ -11,7 +11,7 @@
   }
 }
 @mixin for-phone-to-tablet {
-  @media (max-width: $tablet-sz) {
+  @media (max-width: $tablet-sz - 1) {
     @content;
   }
 }
@@ -21,7 +21,7 @@
   }
 }
 @mixin for-phone-to-desktop {
-  @media (max-width: $desktop-sz) {
+  @media (max-width: $desktop-sz - 1) {
     @content;
   }
 }
